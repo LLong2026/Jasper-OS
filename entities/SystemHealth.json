@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "active_anomaly_count": {
+      "type": "number"
+    },
+    "agent_count": {
+      "type": "number"
+    },
+    "app_id": {
+      "type": "string"
+    },
+    "avg_latency_ms": {
+      "type": "number"
+    },
+    "avg_token_efficiency": {
+      "type": "number"
+    },
+    "heartbeat_status": {
+      "enum": [
+        "alive",
+        "degraded",
+        "dead"
+      ],
+      "type": "string"
+    },
+    "node_count": {
+      "type": "number"
+    },
+    "orphan_node_count": {
+      "type": "number"
+    },
+    "overall_status": {
+      "enum": [
+        "healthy",
+        "degraded",
+        "critical"
+      ],
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "uptime_percentage": {
+      "type": "number"
+    }
+  },
+  "type": "object",
+  "required": [],
+  "name": "SystemHealth"
+}

@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "anomaly_types": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "auto_heal_enabled": {
+      "type": "boolean"
+    },
+    "common_root_causes": {
+      "type": "object"
+    },
+    "confidence_score": {
+      "type": "number"
+    },
+    "first_seen": {
+      "type": "string"
+    },
+    "last_seen": {
+      "type": "string"
+    },
+    "occurrence_count": {
+      "type": "number"
+    },
+    "pattern_name": {
+      "type": "string"
+    },
+    "recommended_playbook_id": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "required": [],
+  "name": "Pattern"
+}
