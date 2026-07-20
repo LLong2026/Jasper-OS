@@ -58,7 +58,7 @@ You may read, share, and reference this work with attribution.
 Commercial use, modification, redistribution, or creation of derivative works is strictly prohibited.
 
 For commercial licensing inquiries, contact:  
-**leon.axiomaticengines@gmail.com**
+**leonlong.research@gmail.com**
 
 ---
 
