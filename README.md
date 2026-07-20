@@ -66,4 +66,4 @@ For commercial licensing inquiries, contact:
 
 This repository contains research documentation only.  
 JASPER is a patented‑pending apparatus and may not be used in commercial systems without a written license agreement.
-
+https://doi.org/10.5281/zenodo.21450025
