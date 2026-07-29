@@ -1,14 +1,15 @@
 {
   "template_name": "Squirrel OS",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "created": "2026-07-19",
+  "last_updated": "2026-07-29",
   "author": "Gabriel (Archangel AI)",
   "description": "AI Self-Healing Orchestration Template — Jasper Hypervisor + Amelia Aegis Healing System",
   "components": {
     "entities": [
       "AegisAnomaly", "AegisPlaybook", "AegisHealingEvent",
       "SystemHealth", "SystemHeartbeat",
-      "OrchestratorAgent", "OrchestratorNode", "OrchestratorTask",
+      "OrchestratorAgent", "OrchestratorNode", "OrchatorTask",
       "Pattern", "Insight", "NeuralNode", "LearningMetric",
       "PredictiveAlert", "SelfImprovementProposal", "RemediationSweep"
     ],
@@ -23,7 +24,7 @@
     "skills": [
       "heartbeat-check", "full-system-sweep", "anomaly-response", "pattern-learning"
     ],
-    "rules": ["squirrel_os_policy.md"],
+    "rules": ["squirrel_os_policy.md", "identity_isolation.md"],
     "seed_data": {
       "playbooks": 10,
       "agents": 2,
@@ -39,10 +40,18 @@
     "1. Create 15 entities (see entities/ directory)",
     "2. Deploy 4 backend functions (see functions/ directory)",
     "3. Seed 10 AegisPlaybooks + 2 agents + 2 nodes (see seed-data/)",
-    "4. Copy rules to .agents/rules/squirrel_os_policy.md",
+    "4. Copy rules to .agents/rules/ (squirrel_os_policy.md + identity_isolation.md)",
     "5. Copy skills to .agents/skills/",
     "6. Create 3 workflows (see workflows/ directory)",
-    "7. Verify: call healthCheck, ameliaHeartbeat, systemMetrics"
+    "7. Apply Identity Isolation — hardcode owner identity in system prompt (see rules/identity_isolation.md)",
+    "8. Purge any existing contaminated data (see rules/identity_isolation.md)",
+    "9. Verify: call healthCheck, ameliaHeartbeat, systemMetrics",
+    "10. Verify identity isolation: test with different account user (see rules/identity_isolation.md)"
   ],
-  "patent_pending": "U.S. Patent Application No. 19/693,343 (ISO20022 Universal Bridge)"
+  "patent_pending": "U.S. Patent Application No. 19/693,343 (ISO20022 Universal Bridge)",
+  "security_notes": {
+    "identity_isolation": "CRITICAL — Before first deployment, apply identity firewall per rules/identity_isolation.md. Prevents cross-drift on shared accounts.",
+    "pqc_compliance": "All cryptographic operations must use approved PQC algorithms: CRYSTALS-Dilithium3, kyber_1024, SPHINCS+-256f",
+    "tenant_isolation": "All entity reads must filter by customer_id. Never expose one customer's data to another."
+  }
 }
